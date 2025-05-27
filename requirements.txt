@@ -1,0 +1,43 @@
+# PPOxFamily 项目统一依赖文件
+# 包含所有章节所需的Python包
+
+# 核心深度学习框架
+torch>=1.8.0
+numpy>=1.19.0
+
+# 强化学习相关
+gym>=0.21.0
+DI-engine>=0.4.5
+DI-treetensor
+
+# 计算机视觉
+opencv-python>=4.5.0
+
+# 游戏环境
+gym-super-mario-bros>=7.3.0
+nes-py>=8.2.0
+
+# 自然语言处理 (第八章大模型相关)
+transformers>=4.20.0
+
+# 数据处理和科学计算
+pandas>=1.3.0
+matplotlib>=3.3.0
+seaborn>=0.11.0
+
+# 其他工具库
+tqdm>=4.62.0
+tensorboard>=2.8.0
+wandb>=0.12.0
+
+# 开发和测试工具
+pytest>=6.2.0
+black>=21.0.0
+flake8>=3.9.0
+
+# 可选依赖 (根据具体应用场景安装)
+# scikit-learn>=1.0.0  # 机器学习算法
+# jupyter>=1.0.0       # Jupyter notebook支持
+# ipython>=7.0.0       # 交互式Python
+# plotly>=5.0.0        # 交互式可视化
+# pillow>=8.0.0        # 图像处理 

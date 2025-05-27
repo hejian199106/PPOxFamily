@@ -8,7 +8,40 @@
 
 P.S. 路过记得点个 star ![stars - ppof](https://img.shields.io/github/stars/opendilab/PPOxFamily?style=social) ，2022年12月起持续更新中~
 
+## 🚀 快速开始
 
+### 安装依赖
+
+我们提供了多种安装方式，请根据你的需求选择：
+
+```bash
+# 方式1: 完整安装（推荐）
+pip install -r requirements.txt
+
+# 方式2: 核心依赖安装
+pip install -r requirements-core.txt
+
+# 方式3: 最小依赖安装（避免编译问题）
+pip install -r requirements-minimal.txt
+
+# 方式4: Windows用户一键安装
+# 双击运行 install_windows.bat
+```
+
+### Windows用户特别说明
+
+如果遇到 `nes-py` 编译错误，请：
+1. 安装 [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+2. 或使用 `requirements-minimal.txt` 跳过游戏环境依赖
+3. 详细说明请查看 [INSTALL.md](INSTALL.md)
+
+### 验证安装
+
+```bash
+# 测试基础PPO算法
+cd chapter1_overview
+python ppo_zh.py
+```
 
 # News
 - 2025.03.13: ❗️❗️Notice: 课程作业数据集及其他相关附加材料现已更新至 [HuggingFace](https://huggingface.co/OpenDILabCommunity/PPOxFamily/tree/main)
@@ -19,7 +52,7 @@ P.S. 路过记得点个 star ![stars - ppof](https://img.shields.io/github/stars
 - 2023.02.23: [bilibili] [PPO x Family 第四章（解密稀疏奖励空间）正式上线](https://www.bilibili.com/video/BV15j411F7ni)
 - 2023.01.16: [bilibili] [PPO x Family 第三章（表征多模态观察空间）正式上线](https://www.bilibili.com/video/BV1rK411r7Kg)
 - 2022.12.23: [bilibili] [PPO x Family 第二章（解构复杂动作空间）正式上线](https://www.bilibili.com/video/BV1wv4y167w2)
-- 2022.12.23: PPO x Family ”算法-代码“ 注解文档网站上线 [传送门](https://opendilab.github.io/PPOxFamily/)
+- 2022.12.23: PPO x Family "算法-代码" 注解文档网站上线 [传送门](https://opendilab.github.io/PPOxFamily/)
 - 2022.12.08: [bilibili] [PPO x Family 第一章（开启决策AI探索之旅）正式上线](https://www.bilibili.com/video/BV1cG4y137dJ)
 - 2022.12.06: [bilibili] [PPO x Family 第一章微课视频：4分钟带你快速入门强化学习的万能钥匙](https://www.bilibili.com/video/BV1e841157Um/)
 - 2022.12.05: [PaperWeekly] [给你一个 PPO × Family 课程，撑起整个决策 AI 宇宙](https://mp.weixin.qq.com/s/KCKfH1VnQGnNWW6svVxdXw)
@@ -64,16 +97,33 @@ P.S. 路过记得点个 star ![stars - ppof](https://img.shields.io/github/stars
 ```text
 .
 ├── LICENSE
-├── assets                       --> 相关图片素材（转载请注明来源）
-├── chapter2_action              --> 课程第二章相关内容
-└── chapter1_overview            --> 课程第一章相关内容
-    ├── chapter1_manuscript.pdf  --> 课程第一章文字稿（对于PPT的补充说明）
-    ├── chapter1_lecture.pdf     --> 课程第一章PPT
-    ├── chapter1_qa.pdf          --> 课程第一章答疑文稿
-    ├── chapter1_homework.pdf    --> 课程第一章习题作业
-    ├── chapter1_hw_solution.pdf   --> 课程第一章习题作业题解
-    ├── chapter1_supp_trpo.pdf          --> 课程第一章补充材料（算法理论推导等）
-    └── chapter1_demo_code.py    --> 课程第一章相关代码实现
+├── README.md                    --> 项目说明文档
+├── INSTALL.md                   --> 详细安装指南
+├── requirements.txt             --> 完整依赖列表
+├── requirements-core.txt        --> 核心依赖列表
+├── requirements-minimal.txt     --> 最小依赖列表（避免编译问题）
+├── install_windows.bat          --> Windows一键安装脚本
+├── 项目调研/                     --> 项目调研报告
+│   └── 项目调研.md
+├── assets/                      --> 相关图片素材（转载请注明来源）
+├── common/                      --> 公共资源
+│   ├── notation.pdf             --> 符号表
+│   └── faq.pdf                  --> 常见问题FAQ
+├── chapter1_overview/           --> 课程第一章相关内容
+│   ├── chapter1_manuscript.pdf  --> 课程第一章文字稿（对于PPT的补充说明）
+│   ├── chapter1_lecture.pdf     --> 课程第一章PPT
+│   ├── chapter1_qa.pdf          --> 课程第一章答疑文稿
+│   ├── chapter1_homework.pdf    --> 课程第一章习题作业
+│   ├── chapter1_hw_solution.pdf --> 课程第一章习题作业题解
+│   ├── chapter1_supp_*.pdf      --> 课程第一章补充材料（算法理论推导等）
+│   └── *.py                     --> 课程第一章相关代码实现
+├── chapter2_action/             --> 课程第二章：动作空间处理
+├── chapter3_obs/                --> 课程第三章：观察空间处理
+├── chapter4_reward/             --> 课程第四章：奖励工程
+├── chapter5_time/               --> 课程第五章：时序建模
+├── chapter6_marl/               --> 课程第六章：多智能体学习
+├── chapter7_tricks/             --> 课程第七章：优化技巧
+└── chapter8_large/              --> 课程第八章：大模型应用
 ```
 
 # 课程答疑和反馈

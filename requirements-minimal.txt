@@ -1,0 +1,27 @@
+# PPOxFamily 最小依赖
+# 不包含游戏环境的核心依赖，避免Windows编译问题
+
+# 深度学习框架
+torch>=1.8.0
+numpy>=1.19.0
+
+# 强化学习核心
+gym>=0.21.0
+DI-engine>=0.4.5
+DI-treetensor
+
+# 自然语言处理 (第八章需要)
+transformers>=4.20.0
+
+pyecharts
+
+# 注意：此文件不包含以下依赖以避免编译问题：
+# - opencv-python (计算机视觉)
+# - gym-super-mario-bros (Mario游戏环境)
+# - nes-py (NES模拟器)
+#
+# 如果需要运行第三章的代码，请手动安装：
+# pip install opencv-python
+# 
+# Windows用户如需游戏环境，请先安装Visual Studio Build Tools，然后：
+# pip install gym-super-mario-bros nes-py 

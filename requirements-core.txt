@@ -1,0 +1,21 @@
+# PPOxFamily 核心依赖
+# 运行项目所需的最基本依赖包
+
+# 深度学习框架
+torch>=1.8.0
+numpy>=1.19.0
+
+# 强化学习核心
+gym>=0.21.0
+DI-engine>=0.4.5
+DI-treetensor
+
+# 计算机视觉 (第三章需要)
+opencv-python>=4.5.0
+
+# 游戏环境 (第三章需要)
+gym-super-mario-bros>=7.3.0
+nes-py>=8.2.0
+
+# 自然语言处理 (第八章需要)
+transformers>=4.20.0 

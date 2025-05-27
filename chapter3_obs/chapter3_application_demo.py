@@ -1,7 +1,7 @@
 # Please install latest DI-engine's main branch first
 from ding.bonus import PPOF
 
-
+# 双足行走
 def bipedalwalker():
     # Please install bipedalwalker env first, `pip3 install box2d`
     # You can refer to the env doc (https://di-engine-docs.readthedocs.io/zh_CN/latest/13_envs/bipedalwalker_zh.html) for more details
@@ -10,7 +10,7 @@ def bipedalwalker():
     # Classic RL interaction loop and save replay video
     agent.deploy(enable_save_replay=True)
 
-
+# 进化环境
 def evogym_carrier():
     # Please install evogym env first, refer to its doc (https://github.com/EvolutionGym/evogym#installation)
     # Or you can use our provided docker (opendilab/ding:nightly-evogym)
@@ -18,14 +18,14 @@ def evogym_carrier():
     agent = PPOF(env='evogym_carrier', exp_name='./evogym_carrier_demo')
     agent.train(step=int(1e6))
 
-
+# 马里奥
 def mario():
     # Please install mario env first, `pip install gym-super-mario-bros`
     # You can refer to the env doc (https://di-engine-docs.readthedocs.io/zh_CN/latest/13_envs/gym_super_mario_bros_zh.html) for more details
     agent = PPOF(env='mario', exp_name='./mario_demo')
     agent.train(step=int(3e6))
 
-
+# 羊
 def di_sheep():
     # Please prepare di_sheep env and modelfirst, you can copy the env and model file to to current directory,
     # which are placed in https://github.com/opendilab/DI-sheep/blob/master/service
@@ -44,14 +44,14 @@ def di_sheep():
     agent = PPOF(env='di_sheep', exp_name='./di_sheep_demo', model=model)
     agent.train(step=int(1e6))
 
-
+# 大鱼
 def procgen_bigfish():
     # Please install procgen env first, `pip install procgen`
     # You can refer to the env doc (https://di-engine-docs.readthedocs.io/zh_CN/latest/13_envs/procgen_zh.html) for more details
     agent = PPOF(env='procgen_bigfish', exp_name='./procgen_bigfish_demo')
     agent.train(step=int(1e7))
 
-
+# 运行测试
 if __name__ == "__main__":
     # You can select and run your favorite demo
     bipedalwalker()
